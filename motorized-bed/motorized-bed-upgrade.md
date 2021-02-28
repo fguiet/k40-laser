@@ -2,6 +2,12 @@
 
 __!!! WORK IN PROGRESS ... DOCUMENTATION BEING WRITTEN ... WORK IN PROGRESS ... !!!__
 
+Quick and dirty videos, I have made : 
+
+* https://youtu.be/IQfGlTcqH2U
+
+* <https://youtu.be/5MnR36rrxaM>
+
 ## Foreword
 
 K40 Laser cutter comes with an awful useless bed so I decided to make my own motorized bed.
@@ -46,11 +52,15 @@ All 3D print parts needed are available here : <https://www.thingiverse.com/thin
 
 ## Bed level software
 
-Software used : 
+* Software used to develop : Visual Studio Code + PlatformIO plugin
 
-* Visual Studio Code + PlatformIO plugin
+* Open source code : self-explanatory open source code, see folder here : `sketches\k40-motorized-bed`
 
-Self-explanatory open source code, see folder here : `sketches\k40-motorized-bed`
+* Using the bed level software
+
+
+
+
 
 TO BE CONTINUED ...
 
@@ -64,6 +74,7 @@ TO BE CONTINUED ...
 | [Power supply : 12v, 3A](https://fr.aliexpress.com/item/32983648084.html?spm=a2g0s.9042311.0.0.27426c379UWNDo)                                                                                                                                                                                                                                    | 1        | 5.47          |
 | [Module d'encodeur rotatif 360 degrés](https://fr.aliexpress.com/item/32648520888.html?spm=a2g0s.9042311.0.0.1ec66c37pUfP6L)                                                                                                                                                                                                                      | 1        | 0.67          |
 | [Arduino Uno](https://fr.aliexpress.com/item/32272099710.html?spm=a2g0o.productlist.0.0.175e3738xCRVQC&algo_pvid=792f52bf-9a79-4d4b-aeee-199bcc69d8aa&algo_expid=792f52bf-9a79-4d4b-aeee-199bcc69d8aa-2&btsid=0b0a187b16145346123117133e6306&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_)                                           | 1        | 2.86          |
+| M3 Bolt                                                                                                                                                                                                                                                                                                                                           | 8        | ?             |
 | Bolt M8 x 80mm                                                                                                                                                                                                                                                                                                                                    | 4        | ?             |
 | Nut M8                                                                                                                                                                                                                                                                                                                                            | 4        | ?             |
 | [End stop switch](https://fr.aliexpress.com/item/32824972155.html?spm=a2g0s.9042311.0.0.27426c37mAJldV)                                                                                                                                                                                                                                           | 1        | 0.59          |
@@ -74,6 +85,3 @@ TO BE CONTINUED ...
 | [DollaTek 5PCS Aluminium GT2 Courroie De Distribution Poulie 20 Dents Alésage 8mm Largeur 6mm et Clé pour RepRap 3D Imprimante Prusa i3](https://www.amazon.fr/gp/product/B07DK1J8ZD/ref=ppx_yo_dt_b_asin_title_o09_s01?ie=UTF8&psc=1)                                                                                                            | 1        | 8             |
 | [Quimat 3x Nema 17 Stepper Moteur,Moteurs pour Imprimante 3D 1.7A 0.59Nm](https://www.amazon.fr/gp/product/B06XQWMDWT/ref=ppx_yo_dt_b_asin_title_o09_s02?ie=UTF8&psc=1)                                                                                                                                                                           | 1        | 40            |
 | [Table de travail en nid d'abeille pour graveur Laser CO2, pièces pour Machine de découpe Shenhui SH K40 graveur de timbres 320x220mm](https://fr.aliexpress.com/item/32603523206.html?spm=a2g0s.9042311.0.0.27426c37F8tu4Z)                                                                                                                      | 1        | 13.96         |
-
-
-
