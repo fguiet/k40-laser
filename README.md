@@ -25,6 +25,8 @@ Details avalaible [here](custom-foot/foot-improvements.md)
 
 ## K40 - Custom motorized bed
 
+WORK IN PROGRESS ... DOCUMENTATION BEING WRITTEN ... WORK IN PROGRESS ... 
+
 Details avalaible [here](motorized-bed/motorized-bed-upgrade.md)
 
 ## K40 Upgrade power control
