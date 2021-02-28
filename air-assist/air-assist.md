@@ -1,4 +1,4 @@
-# K40 Air Assist
+# K40 Air Assist upgrade
 
 A French guy called `Barbatronic` has made a very cool air assist design. Here is a link to the video (in French) where he explained how it did it : <https://www.youtube.com/watch?v=AwNY7BHcYXY>
 

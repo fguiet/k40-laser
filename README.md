@@ -4,66 +4,57 @@
 
 This is all about my K40 Laser improvements ...
 
-## K40 legs/foot improvement
+Thanks goes to (Great French ressources) :
+
+* Jean-Philippe Civade : <https://www.civade.com>
+* Barbatronic : 
+
+Youtube : <https://www.youtube.com/barbatroniclive>
+
+Twitch : <https://www.twitch.tv/barbatroniclive>
+
+Twitter : <https://twitter.com/barbatronic>
+
+## General information / Caution / Rule of thumb / Recommandations
+
+Details avalaible [here](using-k40-general-info/using-k40-laser-cutter.md)
+
+## K40 - Legs/foot improvement
 
 Details avalaible [here](custom-foot/foot-improvements.md)
 
-## K40 custom motorized bed
+## K40 - Custom motorized bed
 
+Details avalaible [here](motorized/foot-improvements.md)
 
 ## K40 Upgrade power control
 
-Upgrade analog power setting
-https://k40.se/k40-laser-upgrades/analog-power-setting/
+TODO
 
-## K40 recommandations
+## K40 - Air Assist
 
-Utilisation de l'eau déminéralisée
+Details avalaible [here](air-assist/air-assist.md)
 
+## K40 - Lens & Mirrors alignments and upgrade
 
-Chasser les bulles d'air du tube C02
+TODO
 
-Format A4
+## K40 - Setting proper focusd
 
-Logiciel Inkscape
+TODO
 
-**3 types de gravure**
+## Bibliography / References
 
-* Gravure Raster - Noir
-* Gravure Vecteur - Rouge
-* Découpe Vecteur - Bleu
+* [Great French references about K40 Laser Cutter - Github Barbatronic](https://github.com/nadarbreicq/Barbatronic/tree/master/laser%20k40)
 
+Barbatronic's GitHub is full of DIY resources (robotic, PCD, FreeCAD, etc)
 
-** Température **
-
-Utiliser de l'eau distillée (réduction des arcs électriques dans le tube), ajouter quelques gouttes d'eau de javel pour réduire l'apparition des mousses
-
-L'eau ne doit pas dépasser les 22 °C et ne doit pas être gelée non plus pour éviter de fissurer le tube...
-
-## Lit motorisé
-
-* https://www.youtube.com/channel/UCkBL_5bC4CUwrZsa-T1-apA
-
-* https://www.youtube.com/watch?v=CWHxK8Uck-s
-
-* [Lit motorisé](https://www.civade.com/post/2020/08/23/D%C3%A9coupe-laser-CO2-K40-%3A-R%C3%A9alisation-d-un-lit-motoris%C3%A9)
-
-## Découpe : les matériaux possibles
-
-Voir cet article : <https://iooner.io/decoupe-laser-les-materiaux/>
-
-## References
-
-* [Blog de Iooner](https://iooner.io/k40-laser/)
-
-* [Github Barbatronic](https://github.com/nadarbreicq/Barbatronic/tree/master/laser%20k40)
+* [In French - General information - Blog de Iooner](https://iooner.io/k40-laser/)
 
 * [Amélioration de la K40 - pointeur laser et Air Assist](https://www.youtube.com/watch?v=AwNY7BHcYXY)
 
-* [Tutorials K40](https://k40.se/)
+* [K40 Tutorials / Ressources](https://k40.se/)
 
-* [Boule de noel](https://www.youtube.com/watch?v=sS2zOudljEQ)
+* [In French - Xmas ball](https://www.youtube.com/watch?v=sS2zOudljEQ)
 
-* [Améliorations / Hacking](https://www.civade.com/post/2020/08/23/D%C3%A9coupe-laser-CO2-K40-Am%C3%A9liorations-/-hacking-de-la-machine)
-
-
+* [In French - Améliorations / Hacking](https://www.civade.com/post/2020/08/23/D%C3%A9coupe-laser-CO2-K40-Am%C3%A9liorations-/-hacking-de-la-machine)

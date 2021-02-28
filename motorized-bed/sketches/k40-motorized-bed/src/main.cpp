@@ -68,7 +68,7 @@
 #define  ENABLE_PIN 6           // Enable stepper motor (Enable / disable current on Nema 17)
 
 // Stepper constants
-#define STEPS_PER_MM 1280      // Number of step needed for 1 mm
+#define STEPS_PER_MM 1280.0      // Number of step needed for 1 mm
 
 // Library objects instantiation
 AccelStepper bed(AccelStepper::DRIVER, STEP_PIN, DIRECTION_PIN);
@@ -83,7 +83,7 @@ AccelStepper bed(AccelStepper::DRIVER, STEP_PIN, DIRECTION_PIN);
 
 // ********** BED STATUS ************
 
-enum bedStatus { FROM_ORIGIN_TO_BED_FOCAL_POINT_LEVEL, FROM_ORIGIN_TO_MATERIAL_ENGRAVE_FOCAL_POINT_LEVEL, FROM_ORIGIN_TO_MATERIAL_CUT_FOCAL_POINT_LEVEL };
+enum bedStatus { FROM_ORIGIN_TO_BED_FOCAL_POINT_LEVEL, FROM_ORIGIN_TO_MATERIAL_ENGRAVE_FOCAL_POINT_LEVEL, FROM_ORIGIN_TO_MATERIAL_CUT_FOCAL_POINT_LEVEL, FROM_ORIGIN_LEVEL };
 
 // bed settings vars
 typedef struct {    
@@ -428,7 +428,7 @@ void displayMainMenuScreen() {
     tft.setTextSize(2);  
     tft.setCursor(0,0);
     tft.setTextColor(BLUE);     
-    tft.print("MAIN MENU");
+    tft.print(F("MAIN MENU"));
 
     tft.setTextSize(1);  
     tft.setCursor(0,21); //16 + 5
@@ -440,7 +440,7 @@ void displayMainMenuScreen() {
         tft.setTextColor(WHITE, BLACK);    
     }
 
-    tft.print("Settings     ->");
+    tft.print(F("Settings     ->"));
 
     //tft.setTextSize(1);  
     tft.setCursor(0,32); //21 + 8 + 3
@@ -452,52 +452,69 @@ void displayMainMenuScreen() {
         tft.setTextColor(WHITE, BLACK);    
     }
 
-    tft.print("Control      ->");
+    tft.print(F("Control      ->"));
 
     //Current settings
     //tft.setTextSize(1);  
     tft.setCursor(0,53); 
     tft.setTextColor(BLUE);            
-    tft.print("Current settings : ");    
+    tft.print(F("Current settings : "));    
 
     //tft.setTextSize(1);  
     tft.setCursor(0,64); 
     tft.setTextColor(GREEN);            
-    tft.print("Mat. thickness : ");
+    tft.print(F("Mat. thickness: "));
     tft.setTextColor(RED);    
     tft.print(String(bedSettings.materialThickness_mm));
     tft.setTextColor(GREEN);    
-    tft.print(" mm");
+    tft.print(F(" mm"));
 
     //tft.setTextSize(1);  
     tft.setCursor(0,77);  //64 + 8 + 3
     tft.setTextColor(GREEN);            
-    tft.print("Bed ori from focal pt : ");
+    tft.print(F("Bed ori from focal pt: "));
     tft.setTextColor(RED);    
     tft.print(String(bedSettings.bedOffsetFromOriginToFocalPoint_mm));
     tft.setTextColor(GREEN);    
-    tft.print(" mm");
+    tft.print(F(" mm"));
 
     //tft.setTextSize(1);  
     tft.setCursor(0,96);  //77 + 8 + 8 + 3
     tft.setTextColor(GREEN);            
-    tft.print("Bed level : ");
+    tft.print(F("Bed level: "));
     tft.setTextColor(RED);    
 
     switch (bedComputedSettings.bed_level_status)
     {        
         case FROM_ORIGIN_TO_BED_FOCAL_POINT_LEVEL:
-        tft.print("bed focal");
+        tft.print(F("bed focal"));
         break;
 
         case FROM_ORIGIN_TO_MATERIAL_ENGRAVE_FOCAL_POINT_LEVEL:
-        tft.print("mat. focal (engrave)");
+        tft.print(F("mat. focal (engrave)"));
         break;
 
         case FROM_ORIGIN_TO_MATERIAL_CUT_FOCAL_POINT_LEVEL:
-        tft.print("mat. focal (cut)");
+        tft.print(F("mat. focal (cut)"));
         break;
+
+        case FROM_ORIGIN_LEVEL:
+        tft.print(F("origin"));
+        break;       
     }
+
+    tft.setCursor(0,115);  //96 + 8 + 8 + 3
+    tft.setTextColor(GREEN);            
+    tft.print(F("Bed level: "));
+    tft.setTextColor(RED);
+
+    //bed.currentPosition() = in STEPS
+    float currentBedPos_mm = bed.currentPosition() / STEPS_PER_MM;
+    //debug_message("Curr pos : " + String(bed.currentPosition()), false);
+
+    tft.print(String(currentBedPos_mm, 2));
+    tft.setTextColor(GREEN);    
+    tft.print(F(" mm"));
 }
 
 void displayControlScreen() {
@@ -507,7 +524,7 @@ void displayControlScreen() {
     tft.setTextSize(1);  
     tft.setCursor(0,0);
     tft.setTextColor(BLUE);     
-    tft.print("CONTROL MENU");
+    tft.print(F("CONTROL MENU"));
 
     //tft.setTextSize(1);  
     tft.setCursor(0,13); //8 + 5
@@ -519,7 +536,7 @@ void displayControlScreen() {
         tft.setTextColor(WHITE, BLACK);    
     }
 
-    tft.print("Move from origin to bed focal"); 
+    tft.print(F("Move from origin to bed focal")); 
 
     //tft.setTextSize(1);  
     tft.setCursor(0,34); //13 + 8 + 8 + 5
@@ -530,7 +547,7 @@ void displayControlScreen() {
     else {
         tft.setTextColor(WHITE, BLACK);    
     }    
-    tft.print("Move from origin to material focal (engrave)") ; 
+    tft.print(F("Move from origin to material focal (engrave)")) ; 
 
     //tft.setTextSize(1);  
     tft.setCursor(0,63); //34 + 8 + 8 + 8 + 5
@@ -542,7 +559,7 @@ void displayControlScreen() {
         tft.setTextColor(WHITE, BLACK);    
     }
     
-    tft.print("Move from origin to material focal (cut)") ; 
+    tft.print(F("Move from origin to material focal (cut)")) ; 
 
     //tft.setTextSize(1);  
     tft.setCursor(0,84); //63 + 8 + 8 +5 
@@ -554,7 +571,7 @@ void displayControlScreen() {
         tft.setTextColor(WHITE, BLACK);    
     }
     
-    tft.print("Move to bed origin") ;
+    tft.print(F("Move to bed origin")) ;
 
     //tft.setTextSize(1);  
     tft.setCursor(0,105); //84 + 8 + 8 + 5 
@@ -566,9 +583,7 @@ void displayControlScreen() {
         tft.setTextColor(WHITE, BLACK);    
     }
     
-    tft.print("Back <-") ;
-
-    
+    tft.print(F("Back <-")) ;
 
 }
 
@@ -579,7 +594,7 @@ void displaySettingsScreen() {
     tft.setTextSize(1);  
     tft.setCursor(0,0);
     tft.setTextColor(BLUE);     
-    tft.print("SETTINGS MENU");
+    tft.print(F("SETTINGS MENU"));
 
     tft.setTextSize(1);  
     tft.setCursor(0,13); //8 + 5
@@ -614,7 +629,7 @@ void displaySettingsScreen() {
         tft.setTextColor(WHITE, BLACK);    
     }
     
-    tft.print("Save settings") ; 
+    tft.print(F("Save settings")) ; 
 
     tft.setTextSize(1);  
     tft.setCursor(0,68); //55 + 8 +5 
@@ -626,7 +641,7 @@ void displaySettingsScreen() {
         tft.setTextColor(WHITE, BLACK);    
     }
     
-    tft.print("Back <-") ; 
+    tft.print(F("Back <-")) ; 
 }
 
 void displayBedOffsetFromOriginToFocalScreen() {
@@ -706,8 +721,8 @@ void refreshDisplay() {
 void moveToComputedBedPosition(long absoluteBedPosition) {
 
     bed.enableOutputs();    
-    bed.setMaxSpeed(3500);
-    bed.setSpeed(3500);
+    bed.setMaxSpeed(2000);
+    bed.setSpeed(2000);
     bed.setAcceleration(10000);    
     
     // Move to new coordinates
@@ -868,6 +883,10 @@ void moveBedToCurrentStatus() {
 
         case FROM_ORIGIN_TO_MATERIAL_CUT_FOCAL_POINT_LEVEL:
         moveCurrentPositionToMaterialCutFocal();
+        break;
+
+        case FROM_ORIGIN_LEVEL:
+        goToOrigin();
         break;
     }
 
@@ -1158,7 +1177,16 @@ void handleEncoderButtonManagement() {
                 //buttonPressedHandled = true;
                 bedComputedSettings.bed_level_status = FROM_ORIGIN_TO_MATERIAL_CUT_FOCAL_POINT_LEVEL;
                 moveBedToCurrentStatus();
-            break;            
+            break;  
+
+            case MOVE_TO_BED_ORIGIN:
+                currentScreen = ORIGIN_SCREEN;
+                refreshDisplay();
+                bedComputedSettings.bed_level_status = FROM_ORIGIN_LEVEL;
+                moveBedToCurrentStatus();
+                currentScreen = CONTROL_SCREEN;
+                refreshDisplay();
+            break;          
 
             case SAVE_SETTINGS_OPTION:
                 //buttonPressedHandled = true;
@@ -1222,14 +1250,6 @@ void handleEncoderButtonManagement() {
                 //buttonPressedHandled = true;
                 currentScreen = SETTINGS_SCREEN;
                 currentOptionSelected = BED_OFFSET_FROM_ORIGIN_TO_FOCAL_OPTION;
-                refreshDisplay();
-            break;
-
-            case MOVE_TO_BED_ORIGIN:
-                currentScreen = ORIGIN_SCREEN;
-                refreshDisplay();
-                goToOrigin();
-                currentScreen = CONTROL_SCREEN;
                 refreshDisplay();
             break;
 
