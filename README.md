@@ -41,9 +41,9 @@ Details avalaible [here](air-assist/air-assist.md)
 
 TODO
 
-## K40 - Setting proper focusd
+## K40 - Setting proper laser focus
 
-TODO
+Details avalaible [here](laser-focus/setting-laser-focus.md)
 
 ## Bibliography / References
 
