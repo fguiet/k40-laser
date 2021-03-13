@@ -47,7 +47,7 @@ With belt and bed (final version does not have the belt tensioner. I am using 12
 All 3D print parts needed are available here : <https://www.thingiverse.com/thing:4778552>
 
 * 3D Print 4 corners : STL file `motorized-bed-base-corner-frame.stl`
-* Cut 4 pieces of 15 x 15 mm aluminium tube (2 pieces of 26.1 mm lenght and 2 pieces of 22.2 mm lenght)
+* Cut 4 pieces of 15 x 15 mm aluminium tube (2 pieces of 26.1 cm lenght and 2 pieces of 22.2 cm lenght)
 * Assemble the 3D print parts and the aluminium tubes
 * Use a 2.5 mm drill bit to drill hole in the aluminium part
 * Use a tap and die (Tarauds in French) M3 x 0.5mm 
