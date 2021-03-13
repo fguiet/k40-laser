@@ -25,15 +25,33 @@ Details avalaible [here](using-k40-general-info/using-k40-laser-cutter.md)
 
 Details avalaible [here](custom-foot/foot-improvements.md)
 
-## K40 - Custom motorized bed
+__Documentation status :__
 
-WORK IN PROGRESS ... DOCUMENTATION BEING WRITTEN ... WORK IN PROGRESS ... 
+2021/03/13 : Up to date and finished
+
+## K40 - Custom motorized bed
 
 Details avalaible [here](motorized-bed/motorized-bed-upgrade.md)
 
-## K40 Upgrade power control
+__Documentation status :__
+
+2021/03/13 : Add paragraph on how using bed level software with pictures
+
+... WORK IN PROGRESS ... DOCUMENTATION BEING WRITTEN ... WORK IN PROGRESS ... 
+
+TODO : add electronic datasheet
+
+## K40 Upgrade control panel
 
 Details avalaible [here](control-panel/control-panel-upgrade.md)
+
+__Documentation status :__
+
+2021/03/13 : Add photo of my upgraded control panel
+
+... WORK IN PROGRESS ... DOCUMENTATION BEING WRITTEN ... WORK IN PROGRESS ... 
+
+TODO : write all the documentation of the modifications I did + add electronic datasheet
 
 ## K40 - Air Assist
 
