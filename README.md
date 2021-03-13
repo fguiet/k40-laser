@@ -1,10 +1,10 @@
 # K40 Laser
 
-![alt text](using-k40-general-info/images/IMG_20210313_115617.jpg)
-
 ## Foreword
 
 This is all about my K40 Laser improvements ...
+
+![alt text](using-k40-general-info/images/IMG_20210313_115617.jpg)
 
 Thanks goes to (Great French ressources) :
 
