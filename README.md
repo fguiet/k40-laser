@@ -1,5 +1,7 @@
 # K40 Laser
 
+![alt text](using-k40-general-info/images/IMG_20210313_115617.jpg)
+
 ## Foreword
 
 This is all about my K40 Laser improvements ...
@@ -31,7 +33,7 @@ Details avalaible [here](motorized-bed/motorized-bed-upgrade.md)
 
 ## K40 Upgrade power control
 
-TODO
+Details avalaible [here](control-panel/control-panel-upgrade.md)
 
 ## K40 - Air Assist
 

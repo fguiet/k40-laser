@@ -4,7 +4,7 @@ __!!! WORK IN PROGRESS ... DOCUMENTATION BEING WRITTEN ... WORK IN PROGRESS ... 
 
 Quick and dirty videos, I have made : 
 
-* https://youtu.be/IQfGlTcqH2U
+* <https://youtu.be/IQfGlTcqH2U>
 
 * <https://youtu.be/5MnR36rrxaM>
 
@@ -36,6 +36,14 @@ Bottom view
 
 ![alt text](images/IMG_20210109_165618.jpg)
 
+With belt (final version does not have the belt tensioner. I am using 1250 mm that fits my design now)
+
+![alt text](images/IMG_20210121_211338.jpg)
+
+With belt and bed (final version does not have the belt tensioner. I am using 1250 mm that fits my design now)
+
+![alt text](images/IMG_20210121_211550.jpg)
+
 All 3D print parts needed are available here : <https://www.thingiverse.com/thing:4778552>
 
 * 3D Print 4 corners : STL file `motorized-bed-base-corner-frame.stl`
@@ -52,17 +60,100 @@ All 3D print parts needed are available here : <https://www.thingiverse.com/thin
 
 ## Bed level software
 
-* Software used to develop : Visual Studio Code + PlatformIO plugin
+Software used to develop : Visual Studio Code + PlatformIO plugin.
 
-* Open source code : self-explanatory open source code, see folder here : `sketches\k40-motorized-bed`
+Self-explanatory open source code, see folder : `sketches\k40-motorized-bed` on this GitHub.
 
 * Using the bed level software
 
+__Powering the K40 laser ON__
 
+1. make the splash screen quickly appear
+2. bed will retrieve its origin
+3. bed will move up to the material focal point (engrave) level, that is to say : 
 
+bed level to best laser focal length lens (should be around 50.8 mm) minus material thickness
 
+Example in my case:
 
-TO BE CONTINUED ...
+14 mm - 5 mm = 9 mm 
+
+14 mm : distance of the bed from the bed origin so the laser focal distance from the bed is around 50.8 mm (default K40 focal length lens). See [Settings laser focus](../laser-focus/setting-laser-focus.md), to understand how I find my setting of 14 mm
+
+5 mm : current material thickness (can be changed)
+
+Splash screen
+
+![alt text](images/splash-screen.jpg)
+
+Bed retrieving its origin
+
+![alt text](images/bed-origin.jpg)
+
+__Main menu__
+
+![alt text](images/main-menu.jpg)
+
+Main menu is made up of (to enter any menu, just hold the button for about half a second) :
+
+1. Settings menu
+
+When entering this menu, you will be able to set/change default material thickness, bed offset from origin to best focal lenght lens (See [Settings laser focus](../laser-focus/setting-laser-focus.md))
+
+2. Control menu 
+
+When entering this menu, you will be able to move the bed to different level (origin, engrave, cut)
+
+3. Current settings values
+
+This is a sum up of the current settings. 
+
+Current material thickness
+
+Current bed origin to best focal point distance. See [Settings laser focus](../laser-focus/setting-laser-focus.md)
+
+Bed level status : engrave (= laser focal point minus material thickness), cut (= laser focal point minus material thickness / 2), origin, laser focal point (distance between bed and laser lenght should be around 50.8 mm)
+
+Current bed level from origin (depends on bed status)
+
+__Settings menu__
+
+![alt text](images/settings-menu.jpg)
+
+Here you can change defaults parameters and save them.
+
+You can change :
+
+The default distance between bed origin and the bed so the bed distance between bed and best focal length lens is around 50.8 mm (again see [Settings laser focus](../laser-focus/setting-laser-focus.md)). Use the menu `Bed offset from origin to focal (xx mm) ->`
+
+The default material thickness. This setting is used to compute automatically the bed level used for engraving or for cutting. Use the menu `Material thickness (x mm) ->`
+
+The following formulas are applied :
+
+Bed level (cut) = bed level offset from origin to best focal point minus material thickness divided by 2
+Bed level (engrave) = bed level offset from origin to best focal point minus material thickness
+
+To change the value : hold the button for half a second then you will be able to change the value by turning the button clockwise or anti-clockwise
+
+You can persist your settings by entering the `Save settings` menu
+
+__Control menu__
+
+![alt text](images/control-menu.jpg)
+
+With the control menu, you will be able freely change your bed level.
+
+`Move from origin to focal (xx mm)` : make your bed go from bed origin to focal point ... quite obvious...the distance can be set using `Settings menu`
+
+`Move from origin to material focal (engrave)` : make your bed go from bed origin to focal point minus material thickness
+
+`Move from origin to material focal (cut)` : make your bed go from bed origin to focal point minus material thickness divided by 2
+
+`Move to bed origin` : make your bed go to the bed origin (lowest point the bed can go). Maybe useful if you want to pull your bed out of your K40.
+
+## Electronic datasheet
+
+TODO : __!!! WORK IN PROGRESS ... DOCUMENTATION BEING WRITTEN ... WORK IN PROGRESS ... !!!__
 
 ## BOM (Bill of materials)
 

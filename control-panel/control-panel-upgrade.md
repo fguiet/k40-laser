@@ -1,5 +1,12 @@
 # K40 - Control panel upgrade
 
+__!!! WORK IN PROGRESS ... DOCUMENTATION BEING WRITTEN ... WORK IN PROGRESS ... !!!__
+
+![alt text](images/IMG_20210313_115730.jpg)
+
+Upgrade analog power setting
+https://k40.se/k40-laser-upgrades/analog-power-setting/
+
 ## Bill of Materials
 
 |                                                                                                                        Designation                                                                                                                        | Quantity | Price (euros) |
