@@ -61,6 +61,12 @@ TODO : Finish this part
 
 French ressource : <https://iooner.io/decoupe-laser-les-materiaux/>
 
+Some working parameters I have tested:
+
+* Plywood (don't think it is made of poplar...)
+
+Cut : 5 mm/s, 16 mA (2.5v)...but there are places not cut very well...dunno why (laser alignment? bed leveling?)
+
 ## BOM (Bill Of Materials)
 
 |                    Name                    |   Price  |
