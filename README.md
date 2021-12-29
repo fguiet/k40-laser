@@ -65,6 +65,10 @@ TODO
 
 Details avalaible [here](laser-focus/setting-laser-focus.md)
 
+## K40 - Flowmeter holder
+
+Details avalaible [here](flowmeter/flowmeter-upgrade.md)
+
 ## Bibliography / References
 
 * [Great French references about K40 Laser Cutter - Github Barbatronic](https://github.com/nadarbreicq/Barbatronic/tree/master/laser%20k40)
