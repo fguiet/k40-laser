@@ -1,6 +1,6 @@
 # Flowmeter holder
 
-This is a flowmeter holder I realised with FreeCAD 2.0
+This is a flowmeter holder I realised with FreeCAD 0.20
 
 ![alt text](images/flowmeter_holder.jpg)
 
